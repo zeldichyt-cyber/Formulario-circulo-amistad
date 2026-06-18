@@ -158,13 +158,49 @@
       font-size: 0.88rem;
       color: #2c2416;
       cursor: pointer;
+      padding: 7px 14px;
+      border: 1.5px solid #e0d9c8;
+      border-radius: 8px;
+      background: #fdfcf8;
+      transition: all 0.15s;
     }
 
     .radio-opt input[type=radio] {
-      accent-color: #c9a84c;
-      width: 17px;
-      height: 17px;
+      appearance: none;
+      -webkit-appearance: none;
+      width: 20px;
+      height: 20px;
+      min-width: 20px;
+      border: 1.5px solid #c9a84c;
+      border-radius: 5px;
+      background: #fff;
+      position: relative;
       cursor: pointer;
+      margin: 0;
+    }
+
+    .radio-opt input[type=radio]:checked {
+      background: #fdf3d8;
+      border-color: #c9a84c;
+    }
+
+    .radio-opt input[type=radio]:checked::after {
+      content: "✗";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #7a5800;
+      font-weight: 900;
+      font-size: 13px;
+      line-height: 1;
+    }
+
+    .radio-opt:has(input:checked) {
+      border-color: #c9a84c;
+      background: #fdf3d8;
+      color: #7a5800;
+      font-weight: 700;
     }
 
     /* CONDITIONAL BOX */
